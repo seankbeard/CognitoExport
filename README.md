@@ -1,4 +1,4 @@
-## CognitoExport ##
+# CognitoExport
 
 ## Export Amazon Cognito User Pool records into CSV
 
@@ -15,13 +15,13 @@ Change DIR to ‘tmp’
 
 ## Add AWS Cedentials as Local Variables
 Add credentials for authenticatio to the AWS Account 
-# For Lunix
+### For Lunix
 
 - `export AWS_ACCESS_KEY_ID=""`
 - `export AWS_SECRET_ACCESS_KEY=""`
 - `export AWS_SESSION_TOKEN=""` # Only required if using Roleswap or SSO Session
 
-# For Windows CMD
+### For Windows CMD
 
 - `SET AWS_ACCESS_KEY_ID=""`
 - `SET AWS_SECRET_ACCESS_KEY=""`
@@ -42,7 +42,7 @@ To start export proccess you shout run next command (__Note__: use `python3` if 
 - `-f` or `--file-name` [_Optional_] - CSV File name or path. _Default_: `CognitoUsers.csv`
 - `--num-records` [_Optional_] - Max Number of Cognito Records tha will be exported. _Default_: __0__ - All
 
-## Example
+### Example
 
 - `python3 CognitoUserToCSV.py --user-pool-id 'ap-southeast-2_XXXXXXXX' -attr Username email_verified given_name family_name phone_number`
 
