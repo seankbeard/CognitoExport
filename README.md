@@ -6,24 +6,26 @@ This project allows to export user records to CSV file from [Amazon Cognito User
 
 ## Clone Git Repo and Build Docker Container
 
-run 'git clone https://github.com/seankbeard/CognitoExport.git'
+Clone Github Repo 'https://github.com/seankbeard/CognitoExport.git'
+- git clone https://github.com/seankbeard/CognitoExport.git
 change DIR to 'CognitoExport'
-run 'docker build --tag cognitoexport .'
-run 'docker run -ti -v ${PWD}:/tmp cognitoexport:latest /bin/bash' 
+- docker build --tag cognitoexport .
+- run docker run -ti -v ${PWD}:/tmp cognitoexport:latest /bin/bash
 Change DIR to ‘tmp’ 
 
 ## Add AWS Cedentials as Local Variables
+Add credentials for authenticatio to the AWS Account 
 # For Lunix
 
-export AWS_ACCESS_KEY_ID="ASIAWIQ6UHUTHXJB2GEI"
-export AWS_SECRET_ACCESS_KEY="h6z2AEt2BjzxLDdygb/Lxt8qOkEY3o+FWtSFIxUn"
-export AWS_SESSION_TOKEN= # Only required if using Roleswap or SSO Session
+- export AWS_ACCESS_KEY_ID=""
+- export AWS_SECRET_ACCESS_KEY=""
+- export AWS_SESSION_TOKEN= # Only required if using Roleswap or SSO Session
 
 # For Windows CMD
 
-SET AWS_ACCESS_KEY_ID=
-SET AWS_SECRET_ACCESS_KEY=
-SET AWS_SESSION_TOKEN= # Only required if using Roleswap or SSO Session
+- SET AWS_ACCESS_KEY_ID=""
+- SET AWS_SECRET_ACCESS_KEY=""
+- SET AWS_SESSION_TOKEN= # Only required if using Roleswap or SSO Session
 
 ## Run export
 
