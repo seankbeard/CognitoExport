@@ -7,25 +7,25 @@ This project allows to export user records to CSV file from [Amazon Cognito User
 ## Clone Git Repo and Build Docker Container
 
 Clone Github Repo 'https://github.com/seankbeard/CognitoExport.git'
-- 'git clone https://github.com/seankbeard/CognitoExport.git'
+- `git clone https://github.com/seankbeard/CognitoExport.git`
 change DIR to 'CognitoExport'
-- 'docker build --tag cognitoexport .'
-- 'run docker run -ti -v ${PWD}:/tmp cognitoexport:latest /bin/bash'
+- `docker build --tag cognitoexport .`
+- `run docker run -ti -v ${PWD}:/tmp cognitoexport:latest /bin/bash`
 Change DIR to ‘tmp’ 
 
 ## Add AWS Cedentials as Local Variables
 Add credentials for authenticatio to the AWS Account 
 # For Lunix
 
-- export AWS_ACCESS_KEY_ID=""
-- export AWS_SECRET_ACCESS_KEY=""
-- export AWS_SESSION_TOKEN= # Only required if using Roleswap or SSO Session
+- `export AWS_ACCESS_KEY_ID=""`
+- `export AWS_SECRET_ACCESS_KEY=""`
+- `export AWS_SESSION_TOKEN=""` # Only required if using Roleswap or SSO Session
 
 # For Windows CMD
 
-- SET AWS_ACCESS_KEY_ID=""
-- SET AWS_SECRET_ACCESS_KEY=""
-- SET AWS_SESSION_TOKEN= # Only required if using Roleswap or SSO Session
+- `SET AWS_ACCESS_KEY_ID=""`
+- `SET AWS_SECRET_ACCESS_KEY=""`
+- `SET AWS_SESSION_TOKEN=""` # Only required if using Roleswap or SSO Session
 
 ## Run export
 
@@ -44,11 +44,11 @@ To start export proccess you shout run next command (__Note__: use `python3` if 
 
 ## Example
 
-- python3 CognitoUserToCSV.py --user-pool-id 'ap-southeast-2_XXXXXXXX' -attr Username email_verified given_name family_name phone_number
+- `python3 CognitoUserToCSV.py --user-pool-id 'ap-southeast-2_XXXXXXXX' -attr Username email_verified given_name family_name phone_number`
 
 ## Access CSV
 
-- exit
+- `exit`
 to quit docker bash session
 
 CSV File will be in the CognitoExport Directory
