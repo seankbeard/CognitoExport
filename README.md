@@ -7,10 +7,10 @@ This project allows to export user records to CSV file from [Amazon Cognito User
 ## Clone Git Repo and Build Docker Container
 
 Clone Github Repo 'https://github.com/seankbeard/CognitoExport.git'
-- git clone https://github.com/seankbeard/CognitoExport.git
+- 'git clone https://github.com/seankbeard/CognitoExport.git'
 change DIR to 'CognitoExport'
-- docker build --tag cognitoexport .
-- run docker run -ti -v ${PWD}:/tmp cognitoexport:latest /bin/bash
+- 'docker build --tag cognitoexport .'
+- 'run docker run -ti -v ${PWD}:/tmp cognitoexport:latest /bin/bash'
 Change DIR to ‘tmp’ 
 
 ## Add AWS Cedentials as Local Variables
@@ -44,11 +44,11 @@ To start export proccess you shout run next command (__Note__: use `python3` if 
 
 ## Example
 
-python3 CognitoUserToCSV.py --user-pool-id 'ap-southeast-2_XXXXXXXX' -attr Username email_verified given_name family_name phone_number
+- python3 CognitoUserToCSV.py --user-pool-id 'ap-southeast-2_XXXXXXXX' -attr Username email_verified given_name family_name phone_number
 
 ## Access CSV
 
-run 'exit'
+- exit
 to quit docker bash session
 
 CSV File will be in the CognitoExport Directory
